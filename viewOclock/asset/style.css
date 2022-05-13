@@ -1,0 +1,587 @@
+.st0{fill:#BABECC;}
+.st1{fill:#c90606;}
+.st2{fill:#333333;}
+
+.circleTimer {
+    stroke-dasharray: 942px;
+    stroke-dashoffset: 942px;
+    stroke-linecap: round;
+    stroke-width: 8px;
+    stroke: #ad0505;
+    fill: none;
+}
+.animationcircle{
+    animation: countdown 10s linear forwards;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 942px;
+  }
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7f7f7;
+}
+body button{
+	-webkit-appearance: none;
+}
+body input{
+	-webkit-appearance: none;
+}
+.navFullChar{
+    display: none;
+    color: #333333;
+    text-transform: uppercase;
+}
+.hidden{
+    display: none !important;
+}
+.wrappprReveil{
+    width: calc(100vw - 80px);
+    padding: 40px 40px 80px 40px;
+}
+.widowsForce{
+    overflow: hidden !important;
+    width: calc(100vw - 80px) !important;
+    height: calc(100vh - 120px) !important;
+    margin:0 !important;
+    padding: 0 !important;
+}
+.mainHorloge{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.horloge{
+    width: 50%;
+    min-width: 320px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#horlogesvg{
+    width: 100%;
+}
+
+.horloge time{
+    position: absolute;
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(1.7rem,3vw,3rem);
+    color: #333333;
+}
+#titre{
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #333333 solid 1px;
+    text-align: center;
+}
+label[for="recurence"],label[for="sonnerie"]{
+    margin-bottom: 8px;
+}
+select:not(#heure, #minutes){
+    border: #33333315 1px solid;
+    padding: 4px 8px;
+}
+body header > nav {
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.66);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid #33333315;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+}
+body > header > nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+body > header > nav li{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0px 16px;
+}
+
+.iconselected{
+    fill:#c90606;
+    opacity:0.75;
+    mask:url(#SVGID_1_);
+    /* box-shadow: inset 4px 4px 8px #9f0505,
+            inset -4px -4px 8px #f30707; */
+}
+.wrappprReveil > form{
+    position: relative;
+    z-index: 99;
+    width: calc(100vw - 80px);
+    height: calc(100vh - 120px);
+    padding: 40px;
+	padding-bottom: 90px;
+    border-radius: 4px;
+    position: absolute;
+    background-color: white;
+}
+.wrappprReveil > form > label:not(label[for = ":"]),textarea{
+    display: block;
+    margin-top: 8px;
+}
+#playSong{
+    margin-left: auto;
+    border: none;
+    background-color: white;
+    color: #333333;
+    font-size: 16px;
+}
+.wrappprReveil > form > fieldset{
+    display: flex;
+    border-top: 1px solid #33333315 ;
+    border-bottom: 1px solid #33333315;
+    border-left: none;
+    border-right: none;
+    margin-top: 14px;
+    padding: 16px 0px;
+    justify-content: space-around;
+    justify-content: center;
+}
+.wrappprReveil > form > div{
+    display: flex;
+    justify-content: space-between;
+}
+label[for="story"]{
+    margin: 16px 0px 8px 0px !important;
+}
+
+.secondarybutton{
+    margin-top: 24px;
+    border-radius: 4px;
+    background-color: #BABECC;
+    border: #33333315 1px solid;
+    padding: 8px 16px;
+    color: #333333;
+}
+.submitButton{
+    margin-top: 24px;
+    border-radius: 4px;
+    background-color: #c90606;
+    border: #6b040415 1px solid;
+    padding: 8px 16px;
+    color: white;
+}
+.comboboxSelectTime{
+    position: relative;
+}
+.comboboxSelectTime > select{
+    display: inline-block;
+    width: 80px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+    appearance: none;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    border: none;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+.comboboxSelectTime > select > option:checked{
+    background-color: white;
+    color: #160000;
+}
+.comboboxSelectTime > select > option{
+    scroll-snap-align: start;
+}
+textarea{
+    resize: none;
+    border: 1px solid #33333315;
+    width: 100%;
+    border-radius: 4px;
+    background: #ffffff;
+    box-shadow: inset 7px 7px 24px #d9d9d933,
+                inset -7px -7px 24px #ffffff33;
+
+}
+#listAlarm{
+    list-style: none;
+    padding: 0;
+}
+#listAlarm > li{
+    border-top: #33333315 1px solid;
+    border-bottom: #33333315 1px solid;
+    border-radius: 4px;
+    padding: 4px;
+    margin: 4px;
+}
+#listAlarm > li > h4{
+    margin-block-end: 0;
+    margin-left: 4px;
+    margin-block-start: 4px;
+}
+#listAlarm > li >div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#listAlarm > li > div > p{
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(1.4rem,2vw,2rem);
+    margin: 0;
+}
+#listAlarm > li > p{
+    margin: 4px;
+    font-size: 10px;
+}
+.toggleMute{
+    border: 1px solid #33333315;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    padding: 2px;
+    border-radius: 44px;
+    background-color: #BABECC;
+    width: 80px;
+    height: 44px;
+    font-stretch : none;
+    border-radius: 22px;
+    background: #c90606;
+    box-shadow: inset 5px 5px 10px #ad0505,
+            inset -5px -5px 10px #e50707;
+    transition: 0.155s;
+}
+.toggleMute > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #dddddd, #ffffff);
+    box-shadow:  5px 5px 10px #d0d0d0;
+    transform: translateX(36px)
+    
+}
+.toggleMute:checked{
+    background-color: #c90606;
+}
+.closeToggle{
+    animation: closeToggle 0.155s cubic-bezier(.48,.06,.73,1.03) forwards;
+}
+@keyframes closeToggle {
+    from {
+        transform: translateX(0px)
+    }
+    to {
+        transform: translateX(36px)
+    }
+}
+.openToggle{
+    animation: openToggle 0.155s cubic-bezier(.48,.06,.73,1.03) forwards;
+}
+@keyframes openToggle {
+    from {
+        transform: translateX(36px)
+    }
+    to {
+        transform: translateX(0px)
+    }
+}
+.toggleOn{
+    animation: toggleOn 0.155s cubic-bezier(.48,.06,.73,1.03) forwards;
+}
+@keyframes toggleOn {
+    from {
+        background: #c90606;
+        box-shadow: inset 5px 5px 10px #ad0505,
+            inset -5px -5px 10px #e50707;
+    }
+    to {
+        background: #f5f5f5;
+        box-shadow: inset 5px 5px 10px #d0d0d0,
+            inset -5px -5px 10px #ffffff;
+    }
+}
+
+#buttonGoForm{
+    width: 100%;
+    background-color: #c90606;
+    color: white;
+    padding: 16px 0px;
+    border: none;
+}
+
+#exitForm{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    top: 15px;
+    right: 15px;
+    font-size: 16px;
+}
+
+.liMuted{
+    color: #777777 !important;
+}
+
+.modaleAlarme{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 90px;
+    overflow-block: hidden;
+    z-index: 100;
+}
+.modaleAlarme > button{
+    background-color: #BABECC;
+    border-radius: 4px;
+    border: #33333333 1px solid;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.24);
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    animation:popAlarme 330ms ease-in forwards;
+}
+@keyframes popAlarme {
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+    
+}
+.disableSelect{
+    pointer-events: none;
+}
+.modaleAlarme img{
+    width: 60px;
+    height: 60px;
+}
+.modaleAlarme div{
+    width: 100%;
+    text-align: left;
+    padding-left: 24px;
+}
+.modaleAlarme h4{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.modaleAlarme p{
+    margin-block-start: 8px;
+}
+#deletAllAlarm{
+    color: #ad0505;
+    background: none;
+    border: none;
+    text-decoration: underline;
+}
+
+/** CHRONO*/
+.wrapperChrono{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.chronoForm{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+	justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+}
+#decompteAlarme{
+    font-family: 'Orbitron', sans-serif;
+    position: absolute;
+    font-size: 1.7rem;
+}
+.commande{
+display: flex;
+}
+.wrapperChrono .commande{
+    position: absolute;
+    bottom: 100px;
+}
+.commande div{
+	display: flex;
+}
+.commande button{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    border: none;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    color: #ad0505;
+    border-radius: 30px;
+    background: linear-gradient(145deg, #dedede, #ffffff);
+    box-shadow:  6px 6px 12px #d2d2d2,
+             -6px -6px 12px #ffffff;
+    font-size: 1.5rem;
+    margin: 0px 8px;
+}
+.commande button:disabled{
+    color: #BABECC;
+}
+.chrono{
+    display: flex;
+    border: none;
+}
+
+.progress-circle{
+    position: relative;             /* pour servir de référent */
+    font-size: 6em;                 /* pour définir les dimensions */
+    width: 300px;                     /* fixe la largeur */
+    height: 300px;                    /* fixe la hauteur */
+    border-radius: 50%;             /* rendu aspect circulaire */
+    background: #f7f7f7;
+    box-shadow:  13px 13px 26px #d2d2d2,
+             -13px -13px 26px #ffffff;
+}
+
+
+#flooz{
+    width: 260px;
+    height: 260px;
+    border-radius: 150px;
+    background: linear-gradient(145deg, #d70606, #b50505);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/**TIMER*/
+.timerForm{
+    display: flex;
+    position: relative;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    margin-top: 48px;
+}
+.timerForm > fieldset{
+    border: #333333 solid 1px;
+    border-radius: 4px;
+}
+.round{
+    padding-top: 8px;
+    margin: 24px;
+    width: calc(100vw - 48px);
+    height: calc(80vh - 160px);
+    border-radius: 11px;
+    background: #f7f7f7;
+    box-shadow: inset 5px 5px 11px #dcdcdc,
+            inset -5px -5px 11px #ffffff;
+    overflow: hidden;
+}
+.round > p{
+    max-width: 284px;
+    margin: auto;
+    padding-left: 24px;
+    border: #33333333 solid 1px;
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 4px;
+    background: #f7f7f7;
+    box-shadow:  7px 7px 14px #dcdcdc,
+             -7px -7px 14px #ffffff;
+}
+.round li > div > h4{
+    margin: 0;
+}
+.round ul{
+    height: calc(100% - 55px);
+    list-style: none;
+    padding: 0;
+    overflow-y: auto;
+}
+.round li{
+    display: flex;
+    flex-direction: column;
+    border-bottom: #33333315 1px solid;
+    border-top: #33333315 1px solid;
+    margin: 4px 0px;
+    padding: 4px;
+}
+.round li>div{
+    padding: 0px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+.round li>p{
+    text-align: center;
+    font-size: 1.33rem;
+    font-family: 'Orbitron', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.negativeScore{
+    color: green;
+}
+.positiveScore{
+    color: #ad0505;
+}
+.timerCommande{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 135px;
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 1024px){
+    .navFullChar{
+        display: initial;
+    }
+    header > nav svg{
+        display: none;
+    }
+    body > header > nav li {
+        width: auto;
+    }
+    body > header > nav li a{
+        text-decoration: none;
+    }
+    body > header > nav li a:hover{
+        font-weight: 500;
+    }
+    body header > nav{
+        position: initial;
+    }
+    .aSelected span{
+        color: #ad0505;
+        font-weight: 500;
+    }
+}

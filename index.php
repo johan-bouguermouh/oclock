@@ -1,0 +1,1 @@
+<?php header('location: ./viewOclock/home.php');?>
